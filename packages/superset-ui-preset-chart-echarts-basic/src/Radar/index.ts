@@ -16,4 +16,5 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+/* eslint-disable import/prefer-default-export */
 export { default as EchartsBasicRadarPlugin } from './Radar';

@@ -36,29 +36,28 @@ interface Indicator {
 export default function transformProps(chartProps: ChartProps) {
   const { height, width, formData, queryData } = chartProps;
   const { data } = queryData;
-  const indicator: Indicator[] = (formData.metrics as LabeledObject[]).map(({ label }) => {
-    return { name: label };
-  });
+  const indicator: Indicator[] = (formData.metrics as LabeledObject[]).map(({ label }) => ({
+    name: label,
+  }));
   const nameField: string = formData.groupby[0];
-  const seriesData: SeriesData[] = data.map((item: object) => {
-    return {
-      value: indicator.map(({ name }) => item[name]),
-      name: item[nameField],
-    };
-  });
+  const seriesData: SeriesData[] = data.map((item: { [key: string]: any }) => ({
+    value: indicator.map(({ name }) => item[name]),
+    name: item[nameField],
+  }));
   const option = {
     tooltip: {},
     legend: {
-      data: seriesData.map(({ value, name }) => name),
+      data: seriesData.map(({ name }) => name),
     },
     radar: {
-      indicator: indicator,
+      indicator,
     },
     series: {
       type: 'radar',
       data: seriesData,
     },
   };
+
   return {
     height,
     width,

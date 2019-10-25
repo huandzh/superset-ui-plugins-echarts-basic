@@ -24,9 +24,9 @@ import thumbnail from './images/thumbnail.png';
 const controlPanel = {
   controlPanelSections: [
     {
-      label: t('Query'),
-      expanded: true,
       controlSetRows: [['metrics'], ['adhoc_filters'], ['groupby'], ['limit']],
+      expanded: true,
+      label: t('Query'),
     },
   ],
 };
@@ -41,10 +41,10 @@ const metadata = new ChartMetadata({
 export default class EchartsBasicRadarPlugin extends ChartPlugin {
   constructor() {
     super({
+      controlPanel,
       loadChart: () => import('../EchartsBase'),
       metadata,
       transformProps,
-      controlPanel,
     });
   }
 }
