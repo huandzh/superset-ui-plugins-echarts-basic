@@ -18,33 +18,18 @@
  * under the License.
  */
 import React from 'react';
+import ReactEcharts from 'echarts-for-react';
 
-export type DummyChartProps = {
+export type EchartsBaseProps = {
   height: number;
   width: number;
-  data: { x: number; y: number }[];
+  option: { [key: string]: any };
 };
 
-export default class DummyChart extends React.PureComponent<DummyChartProps> {
+export default class EchartsBase extends React.PureComponent<EchartsBaseProps> {
   render() {
-    const { data, height, width } = this.props;
+    const { height, width, option } = this.props;
 
-    return (
-      <svg style={{ backgroundColor: '#ffe459', borderRadius: 8, height, width }}>
-        {data.map(({ x, y }) => (
-          <circle
-            key={[x, y].join('-')}
-            cx={x * width}
-            cy={y * height}
-            r={Math.random() * 20}
-            fill="#fff"
-            opacity="0.5"
-          />
-        ))}
-        <text x={width / 2} y={height / 2} textAnchor="middle" fontWeight="bold" fontSize="36">
-          Hello!
-        </text>
-      </svg>
-    );
+    return <ReactEcharts option={option} style={{ height, width }} />;
   }
 }

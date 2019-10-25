@@ -1,5 +1,3 @@
-import { ChartProps } from '@superset-ui/chart';
-
 /**
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -18,16 +16,35 @@ import { ChartProps } from '@superset-ui/chart';
  * specific language governing permissions and limitations
  * under the License.
  */
-/* eslint-disable sort-keys */
-export default function transformProps(chartProps: ChartProps) {
-  const { width, height, formData, queryData } = chartProps;
-  const { color } = formData;
-  const { data } = queryData;
+import { t } from '@superset-ui/translation';
+import { ChartMetadata, ChartPlugin } from '@superset-ui/chart';
+import transformProps from './transformProps';
+import thumbnail from './images/thumbnail.png';
 
-  return {
-    width,
-    height,
-    color,
-    data,
-  };
+const controlPanel = {
+  controlPanelSections: [
+    {
+      label: t('Query'),
+      expanded: true,
+      controlSetRows: [['metrics'], ['adhoc_filters'], ['groupby'], ['limit']],
+    },
+  ],
+};
+
+const metadata = new ChartMetadata({
+  description: 'Echarts Basic : Radar Chart',
+  name: t('Echarts Basic - Radar'),
+  thumbnail,
+  useLegacyApi: false,
+});
+
+export default class EchartsBasicRadarPlugin extends ChartPlugin {
+  constructor() {
+    super({
+      loadChart: () => import('../EchartsBase'),
+      metadata,
+      transformProps,
+      controlPanel,
+    });
+  }
 }

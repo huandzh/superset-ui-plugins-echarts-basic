@@ -19,15 +19,49 @@ import { ChartProps } from '@superset-ui/chart';
  * under the License.
  */
 /* eslint-disable sort-keys */
-export default function transformProps(chartProps: ChartProps) {
-  const { width, height, formData, queryData } = chartProps;
-  const { color } = formData;
-  const { data } = queryData;
+interface LabeledObject {
+  label: string;
+}
 
+interface SeriesData {
+  value: number[];
+  name: string;
+}
+
+interface Indicator {
+  name: string;
+  max?: number;
+}
+
+export default function transformProps(chartProps: ChartProps) {
+  const { height, width, formData, queryData } = chartProps;
+  const { data } = queryData;
+  const indicator: Indicator[] = (formData.metrics as LabeledObject[]).map(({ label }) => {
+    return { name: label };
+  });
+  const nameField: string = formData.groupby[0];
+  const seriesData: SeriesData[] = data.map((item: object) => {
+    return {
+      value: indicator.map(({ name }) => item[name]),
+      name: item[nameField],
+    };
+  });
+  const option = {
+    tooltip: {},
+    legend: {
+      data: seriesData.map(({ value, name }) => name),
+    },
+    radar: {
+      indicator: indicator,
+    },
+    series: {
+      type: 'radar',
+      data: seriesData,
+    },
+  };
   return {
-    width,
     height,
-    color,
-    data,
+    width,
+    option,
   };
 }

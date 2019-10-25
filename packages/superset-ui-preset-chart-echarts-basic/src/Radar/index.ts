@@ -16,23 +16,4 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-import { t } from '@superset-ui/translation';
-import { ChartMetadata, ChartPlugin } from '@superset-ui/chart';
-import transformProps from './transformProps';
-import thumbnail from './images/thumbnail.png';
-
-const metadata = new ChartMetadata({
-  description: '',
-  name: t('Example dummy chart'),
-  thumbnail,
-});
-
-export default class DummyChartPlugin extends ChartPlugin {
-  constructor() {
-    super({
-      loadChart: () => import('./DummyChart'),
-      metadata,
-      transformProps,
-    });
-  }
-}
+export { default as EchartsBasicRadarPlugin } from './Radar';
