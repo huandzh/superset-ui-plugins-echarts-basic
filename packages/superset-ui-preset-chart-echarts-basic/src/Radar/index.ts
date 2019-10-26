@@ -1,5 +1,3 @@
-import { ChartProps } from '@superset-ui/chart';
-
 /**
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -18,16 +16,5 @@ import { ChartProps } from '@superset-ui/chart';
  * specific language governing permissions and limitations
  * under the License.
  */
-/* eslint-disable sort-keys */
-export default function transformProps(chartProps: ChartProps) {
-  const { width, height, formData, queryData } = chartProps;
-  const { color } = formData;
-  const { data } = queryData;
-
-  return {
-    width,
-    height,
-    color,
-    data,
-  };
-}
+/* eslint-disable import/prefer-default-export */
+export { default as EchartsBasicRadarPlugin } from './Radar';

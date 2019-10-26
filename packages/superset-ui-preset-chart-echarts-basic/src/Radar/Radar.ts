@@ -21,16 +21,28 @@ import { ChartMetadata, ChartPlugin } from '@superset-ui/chart';
 import transformProps from './transformProps';
 import thumbnail from './images/thumbnail.png';
 
+const controlPanel = {
+  controlPanelSections: [
+    {
+      controlSetRows: [['metrics'], ['adhoc_filters'], ['groupby'], ['limit']],
+      expanded: true,
+      label: t('Query'),
+    },
+  ],
+};
+
 const metadata = new ChartMetadata({
-  description: '',
-  name: t('Example dummy chart'),
+  description: 'Echarts Basic : Radar Chart',
+  name: t('Echarts Basic - Radar'),
   thumbnail,
+  useLegacyApi: false,
 });
 
-export default class DummyChartPlugin extends ChartPlugin {
+export default class EchartsBasicRadarPlugin extends ChartPlugin {
   constructor() {
     super({
-      loadChart: () => import('./DummyChart'),
+      controlPanel,
+      loadChart: () => import('../EchartsBase'),
       metadata,
       transformProps,
     });

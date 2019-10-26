@@ -1,19 +1,25 @@
-# @superset-ui/plugins-template 🔌💡
+# superset-ui-preset-chart-echarts-basic 🔌💡
 
-[![Codecov branch](https://img.shields.io/codecov/c/github/apache-superset/superset-ui-plugins-template/master.svg?style=flat-square)](https://codecov.io/gh/apache-superset/superset-ui-plugins-template/branch/master)
-[![Build Status](https://img.shields.io/travis/com/apache-superset/superset-ui-plugins-template/master.svg?style=flat-square
-)](https://travis-ci.com/apache-superset/superset-ui-plugins-template)
-[![David](https://img.shields.io/david/dev/apache-superset/superset-ui-plugins-template.svg?style=flat-square)](https://david-dm.org/apache-superset/superset-ui-plugins-template?type=dev)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/d2c78390-752e-4fc2-abf0-7e6df362b9ff/deploy-status)](https://app.netlify.com/sites/superset-ui-plugins-template/deploys)
+WIP.
 
-You can create a new repository based on this one and rename `plugin-chart-dummy` to your plugin.
-There is also an example for `preset` package. `preset` contains two or more plugins, which is useful when the plugins are tightly-coupled together.
+The initial purpose of this repo is to support [Echarts](https://echarts.apache.org) radar in [Superset](https://superset.incubator.apache.org/). You can also use it as a reference on how to support other visualizations of Echarts.
+
+## Available chart
+
+### Echarts Radar Chart
+
+Snapshot in Superset:
+
+![Echarts Radar in Superset](docs/images/echarts-radar-in-superset.png)
+
+See also:
+
+* [Plugin Package Readme](/packages/supsuperset-ui-preset-chart-echarts-basic)
+* [Echarts Radar Official Gallery](https://echarts.apache.org/examples/en/index.html#chart-type-radar)
 
 ## Demo (Storybook)
 
-Most recent release: https://apache-superset.github.io/superset-ui-plugins-template/
-
-Current master: https://superset-ui-plugins-template.netlify.com
+Current master: http://echarts-basic.iamhd.top
 
 > Note: You have to customize your own netlify to use this.
 
@@ -21,13 +27,40 @@ Current master: https://superset-ui-plugins-template.netlify.com
 
 | Package | Version | Note |
 |--|--|--|
-| [@superset-ui/plugin-chart-dummy](https://github.com/apache-superset/superset-ui/tree/master/packages/superset-ui-plugin-chart-dummy) | [![Version](https://img.shields.io/npm/v/@superset-ui/plugin-chart-dummy.svg?style=flat-square)](https://img.shields.io/npm/v/@superset-ui/plugin-chart-dummy.svg?style=flat-square) | |
-| [@superset-ui/preset-chart-dummies](https://github.com/apache-superset/superset-ui/tree/master/packages/superset-ui-preset-chart-dummies) | [![Version](https://img.shields.io/npm/v/@superset-ui/preset-chart-dummies.svg?style=flat-square)](https://img.shields.io/npm/v/@superset-ui/preset-chart-dummies.svg?style=flat-square) | |
+| [superset-ui-preset-chart-echarts-basic](https://github.com/huandzh/superset-ui-plugins-echarts-basic/tree/master/packages/superset-ui-preset-chart-echarts-basic) | [![Version](https://img.shields.io/npm/v/superset-ui-preset-chart-echarts-basic.svg?style=flat-square)](https://img.shields.io/npm/v/superset-ui-preset-chart-echarts-basic.svg?style=flat-square) | [README](/packages/supsuperset-ui-preset-chart-echarts-basic)|
+
+> See README to use
 
 ## Contribution and development guide
 
 Please read the [contributing guidelines](https://github.com/apache-superset/superset-ui/blob/master/CONTRIBUTING.md) which include development environment setup
 and other things you should know about coding in this repo.
+
+> Note: This repo is created with template at https://github.com/apache-superset/superset-ui-plugins-template .
+
+### Tips on developing new plugin
+
+The following is a typical plugin class:
+
+```typescript
+export default class EchartsBasicRadarPlugin extends ChartPlugin {
+  constructor() {
+    super({
+      controlPanel,
+      loadChart: () => import('../EchartsBase'),
+      metadata,
+      transformProps,
+    });
+  }
+}
+```
+
+Let's break it down:
+
+* metadata - define the name and thumbnail displayed when user select a chart type to create
+* controlPanel - define control panel shown on left side when user edit a chart
+* loadChart - load react componet of a chart
+* transformProps - transform form data and query data into chart props, which includes visual settings and data in proper format
 
 
 ### License
