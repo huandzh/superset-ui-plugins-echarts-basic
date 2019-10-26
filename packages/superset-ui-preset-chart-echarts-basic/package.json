@@ -1,7 +1,7 @@
 {
   "name": "superset-ui-preset-chart-echarts-basic",
   "version": "0.0.1",
-  "description": "Superset Chart Preset - Echarts basic charts",
+  "description": "Superset Chart Preset - Echarts basic charts (WIP)",
   "sideEffects": [
     "*.css"
   ],
