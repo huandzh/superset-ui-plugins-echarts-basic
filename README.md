@@ -57,10 +57,10 @@ export default class EchartsBasicRadarPlugin extends ChartPlugin {
 
 Let's break it down:
 
-* metadata - define the name and thumbnail displayed when selecting a chart to create in Superset
-* controlPanel - define control panel shown on left side where user create a new chart in Superset, and thus customize query and display settings for the chart
-* loadChart - load react componet of the chart
-* transformProps - transform form data from control panel and query data into chart props which also includes data in supported format
+* metadata - define the name and thumbnail displayed when user select a chart type to create
+* controlPanel - define control panel shown on left side when user edit a chart
+* loadChart - load react componet of a chart
+* transformProps - transform form data and query data into chart props, which includes visual settings and data in proper format
 
 
 ### License
