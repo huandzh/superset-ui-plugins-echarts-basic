@@ -14,7 +14,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/apache-superset/superset-ui-plugins-template.git"
+    "url": "git+https://github.com/huandzh/superset-ui-plugins-echarts-basic.git"
   },
   "keywords": [
     "superset"
@@ -22,9 +22,9 @@
   "author": "Superset",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/apache-superset/superset-ui-plugins-template/issues"
+    "url": "https://github.com/huandzh/superset-ui-plugins-echarts-basic/issues"
   },
-  "homepage": "https://github.com/apache-superset/superset-ui-plugins-template#readme",
+  "homepage": "https://github.com/huandzh/superset-ui-plugins-echarts-basic",
   "publishConfig": {
     "access": "public"
   },
