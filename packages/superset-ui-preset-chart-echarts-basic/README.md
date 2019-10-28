@@ -10,7 +10,7 @@ This plugin provides a set of basic charts of `echarts` for Superset.
 Configure `key`, which can be any `string`, and register the plugin. This `key` will be used to lookup this chart throughout the app.
 
 ```js
-import { EchartsBasicRadarPlugin } from 'superset-ui-preset-chart-echarts-basic';
+import { EchartsBasicRadarPlugin } from '@dmicros/superset-ui-preset-chart-echarts-basic';
 
 new EchartsBasicRadarPlugin()
   .configure({ key: 'echarts-basic-radar' })
@@ -38,7 +38,7 @@ Extra works in your `superset` code base:
 * Register plugins in `superset/assets/src/setup/setupPluginsExtra.js`
 
 ```javascript
-import { EchartsBasicRadarPlugin } from 'superset-ui-preset-chart-echarts-basic';
+import { EchartsBasicRadarPlugin } from '@dmicros/superset-ui-preset-chart-echarts-basic';
 
 export default function setupPluginsExtra() {
   new EchartsBasicRadarPlugin()

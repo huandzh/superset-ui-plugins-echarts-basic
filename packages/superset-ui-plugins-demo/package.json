@@ -1,6 +1,6 @@
 {
-  "name": "@superset-ui/plugins-demo",
-  "version": "0.11.2",
+  "name": "@dmicros/plugins-demo",
+  "version": "0.0.1",
   "description": "Storybook for Superset UI Plugins 🔌💡",
   "private": true,
   "main": "index.js",
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/apache-superset/superset-ui-plugins.git"
+    "url": "git+https://github.com/huandzh/superset-ui-plugins-echarts-basic.git"
   },
   "keywords": [
     "storybook",
@@ -26,9 +26,9 @@
   ],
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/apache-superset/superset-ui-plugins/issues"
+    "url": "https://github.com/huandzh/superset-ui-plugins-echarts-basic/issues"
   },
-  "homepage": "https://github.com/apache-superset/superset-ui-plugins#readme",
+  "homepage": "https://github.com/huandzh/superset-ui-plugins-echarts-basic#readme",
   "dependencies": {
     "@babel/polyfill": "^7.4.3",
     "@storybook/addon-actions": "^5.0.9",
