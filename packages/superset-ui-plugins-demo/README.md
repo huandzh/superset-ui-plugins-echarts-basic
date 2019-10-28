@@ -1,9 +1,9 @@
 ## @superset-ui/demo
 
-[![David (path)](https://img.shields.io/david/apache-superset/superset-ui-plugins-template.svg?path=packages%2Fsuperset-ui-demo&style=flat-square)](https://david-dm.org/apache-superset/superset-ui-plugins-template?path=packages/superset-ui-demo)
+[![David (path)](https://img.shields.io/david/huandzh/superset-ui-plugins-echarts-basic.svg?path=packages%2Fsuperset-ui-plugins-demo&style=flat-square)](https://david-dm.org/huandzh/superset-ui-plugins-echarts-basic?path=packages/superset-ui-plugins-demo)
 
-Storybook of `@superset-ui-plugins-template` packages. See it live at
-[apache-superset.github.io/superset-ui-plugins-template](https://apache-superset.github.io/superset-ui-plugins-template)
+Storybook of `@dmicros/superset-ui-plugins-echarts-basic` packages. See it live at
+[echarts-basic.iamhd.top](https://echarts-basic.iamhd.top)
 
 ### Development
 

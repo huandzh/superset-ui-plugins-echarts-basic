@@ -1,9 +1,11 @@
-## superset-ui-preset-chart-echarts-basic
+## @dmicros/superset-ui-preset-chart-echarts-basic
 
-[![Version](https://img.shields.io/npm/v/superset-ui-preset-chart-dummies.svg?style=flat-square)](https://img.shields.io/npm/v/superset-ui-preset-chart-dummies.svg?style=flat-square)
-[![David (path)](https://img.shields.io/david/apache-superset/superset-ui-plugins-template.svg?path=packages%2Fsuperset-ui-preset-chart-dummies&style=flat-square)](https://david-dm.org/apache-superset/superset-ui-plugins-template?path=packages/superset-ui-preset-chart-dummies)
+[![Version](https://img.shields.io/npm/v/@dmicros/superset-ui-preset-chart-echarts-basic.svg?style=flat-square)](https://img.shields.io/npm/v/@dmicros/superset-ui-preset-chart-echarts-basic.svg?style=flat-square)
+[![David (path)](https://img.shields.io/david/huandzh/superset-ui-plugins-echarts-basic.svg?path=packages%2Fsuperset-ui-preset-chart-echarts-basic&style=flat-square)](https://david-dm.org/huandzh/superset-ui-plugins-echarts-basic?path=packages/superset-ui-preset-chart-echarts-basic)
 
 This plugin provides a set of basic charts of `echarts` for Superset.
+
+W.I.P: not stable for use before version 0.1.0
 
 ### Usage
 
@@ -17,7 +19,7 @@ new EchartsBasicRadarPlugin()
   .register();
 ```
 
-Then use it via `SuperChart`. See [storybook](https://apache-superset.github.io/superset-ui-plugins-template/?selectedKind=plugin-chart-watermelon) for more details.
+Then use it via `SuperChart`. See [storybook](https://echarts-basic.iamhd.top/?path=/story/preset-echarts-echartsbasicradarplugin--basic) for more details.
 
 ```js
 <SuperChart
@@ -60,5 +62,5 @@ class EchartsBasicRadarViz(BaseViz):
 * Install the plugin and rebuild `superset/assets`
 
 ```shell
-yarn add <registery address of the plugin> && yarn build
+yarn add @dmicros/superset-ui-preset-chart-echarts-basic && yarn build
 ```
