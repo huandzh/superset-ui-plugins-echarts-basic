@@ -27,7 +27,7 @@ Current master: http://echarts-basic.iamhd.top
 
 | Package | Version | Note |
 |--|--|--|
-| [@dmicros/superset-ui-preset-chart-echarts-basic](https://github.com/huandzh/superset-ui-plugins-echarts-basic/tree/master/packages/superset-ui-preset-chart-echarts-basic) | [![Version](https://img.shields.io/npm/v/@dmicros/superset-ui-preset-chart-echarts-basic.svg?style=flat-square)](https://img.shields.io/npm/v/@dmicros/superset-ui-preset-chart-echarts-basic.svg?style=flat-square) | [README](/packages/supsuperset-ui-preset-chart-echarts-basic)|
+| [@dmicros/superset-ui-preset-chart-echarts-basic](https://github.com/huandzh/superset-ui-plugins-echarts-basic/tree/master/packages/superset-ui-preset-chart-echarts-basic) | [![Version](https://img.shields.io/npm/v/@dmicros/superset-ui-preset-chart-echarts-basic.svg?style=flat-square)](https://img.shields.io/npm/v/@dmicros/superset-ui-preset-chart-echarts-basic.svg?style=flat-square) | [README](/packages/superset-ui-preset-chart-echarts-basic)|
 
 > See README to use
 
