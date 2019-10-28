@@ -11,9 +11,9 @@ Storybook of `@superset-ui-plugins-template` packages. See it live at
 
 To view the storybook locally, you should:
 
-1. Clone [superset-ui-plugins-template](https://github.com/apache-superset/superset-ui-plugins-template) repo.
-2. Run `yarn install && yarn build` in the `superset-ui-plugins-template` root directory.
-3. Change to the demo directory `cd packages/superset-ui-plugins-template-demo`.
+1. Clone [huandzh/superset-ui-plugins-echarts-basic](https://github.com/huandzh/superset-ui-plugins-echarts-basic.git) repo.
+2. Run `yarn install && yarn build` in the `huandzh/superset-ui-plugins-echarts-basic` root directory.
+3. Change to the demo directory `cd packages/superset-ui-plugins-demo`.
 4. Run `yarn run storybook`.  This will open up a dev server at http://localhost:9001.
 
 #### Adding new stories
