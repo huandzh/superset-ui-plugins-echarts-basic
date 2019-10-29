@@ -16,21 +16,33 @@ export default {
       indicator: [
         {
           name: 'AVG(SP_RUR_TOTL_ZS)',
+          max: 50,
+          min: null,
         },
         {
           name: 'AVG(SP_DYN_LE00_IN)',
+          max: 50,
+          min: null,
         },
         {
           name: 'AVG(SH_H2O_SAFE_ZS)',
+          max: 50,
+          min: null,
         },
         {
           name: 'AVG(SP_POP_GROW)',
+          max: 50,
+          min: null,
         },
         {
           name: 'AVG(SE_PRM_ENRR)',
+          max: 50,
+          min: null,
         },
         {
           name: 'AVG(SH_STA_WAST_ZS)',
+          max: 50,
+          min: null,
         },
       ],
     },

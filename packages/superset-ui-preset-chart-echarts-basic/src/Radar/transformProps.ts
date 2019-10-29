@@ -31,13 +31,18 @@ interface SeriesData {
 interface Indicator {
   name: string;
   max?: number;
+  min?: number;
 }
 
 export default function transformProps(chartProps: ChartProps) {
   const { height, width, formData, queryData } = chartProps;
   const { data } = queryData;
+  const yMin = formData.yAxisBounds[0];
+  const yMax = formData.yAxisBounds[1];
   const indicator: Indicator[] = (formData.metrics as LabeledObject[]).map(({ label }) => ({
     name: label,
+    max: yMax,
+    min: yMin,
   }));
   const nameField: string = formData.groupby[0];
   const seriesData: SeriesData[] = data.map((item: { [key: string]: any }) => ({
