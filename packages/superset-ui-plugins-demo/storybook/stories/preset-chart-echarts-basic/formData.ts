@@ -13,6 +13,7 @@ export default {
     granularity_sqla: 'year',
     time_grain_sqla: 'P1D',
     time_range: 'No filter',
+    yAxisBounds: [null, null],
     metrics: [
       {
         aggregate: 'AVG',

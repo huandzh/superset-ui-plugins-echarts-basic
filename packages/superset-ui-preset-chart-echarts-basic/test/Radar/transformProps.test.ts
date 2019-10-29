@@ -3,6 +3,7 @@ import formData from '../../../superset-ui-plugins-demo/storybook/stories/preset
 import propsData from './propsData';
 
 describe('EchartsBasicRadarPlugin transformProps', () => {
+  formData.form_data.yAxisBounds = [null, 50];
   const chartProps = {
     formData: formData.form_data,
     height: 600,

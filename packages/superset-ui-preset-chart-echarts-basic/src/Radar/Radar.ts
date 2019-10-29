@@ -28,6 +28,11 @@ const controlPanel = {
       expanded: true,
       label: t('Query'),
     },
+    {
+      controlSetRows: [['y_axis_bounds']],
+      expanded: true,
+      label: t('Customize'),
+    },
   ],
 };
 
