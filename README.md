@@ -1,6 +1,6 @@
 # @dmicros/superset-ui-preset-chart-echarts-basic 🔌💡
 
-WIP.
+The repository is archived as Superset now has built-in radar chart support.
 
 The initial purpose of this repo is to support [Echarts](https://echarts.apache.org) radar in [Superset](https://superset.incubator.apache.org/). You can also use it as a reference on how to support other visualizations of Echarts.
 
